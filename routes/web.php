@@ -15,7 +15,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $nombre= 'Fredis Barrios';
+    return view('index',['nombre'=>$nombre]);
+    
+});
+Route::get('/Arquitectura', function () {
+    $nombre= 'Fredis Barrios';
+    return view('Arquitectura',['nombre'=>$nombre]);
+    
+});
+Route::get('/Construccion', function () {
+    $nombre= 'Fredis Barrios';
+    return view('Construccion',['nombre'=>$nombre]);
+
+});
+Route::get('/Diseño', function () {
+    $nombre= 'Fredis Barrios';
+    return view('Diseño',['nombre'=>$nombre]);
+
 });
 
 Route::get('/dashboard', function () {
