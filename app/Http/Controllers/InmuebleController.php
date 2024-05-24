@@ -12,7 +12,8 @@ class InmuebleController extends Controller
      */
     public function index()
     {
-        //
+        $inmuebles= inmueble::all();
+        return view('inmuebles.proyectos',compact('inmuebles'));
     }
 
     /**

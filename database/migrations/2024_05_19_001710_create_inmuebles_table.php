@@ -15,9 +15,9 @@ return new class extends Migration
         Schema::create('inmuebles', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_producto');
-            $table->text('descripcion');
-            $table->integer('stock');
+            $table->text('descripcion');           
             $table->integer('precio');
+            $table->integer('stock');
             $table->text('imagen');
             $table->string('pais');
             $table->string('ciudad');

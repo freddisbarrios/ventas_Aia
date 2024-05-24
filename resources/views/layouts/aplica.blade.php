@@ -11,7 +11,7 @@
     <header>
         @include('layouts.navbar')
         <div class="text-end text-lg font-bold text-green-800 mr-6 text-">
-            Bienvenido {{$nombre}}!
+            Bienvenido Fredis Barrios!
         </div>
     </header>
     <main>

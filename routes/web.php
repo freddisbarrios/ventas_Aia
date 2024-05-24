@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InmuebleController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,8 @@ Route::get('/', function () {
     return view('index',['nombre'=>$nombre]);
     
 });
+Route::get('/inmuebles',[InmuebleController::class,'index'])->name('inmuebles.index');
+
 Route::get('/Arquitectura', function () {
     $nombre= 'Fredis Barrios';
     return view('Arquitectura',['nombre'=>$nombre]);
