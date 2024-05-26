@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Inmueble extends Model
 {
     use HasFactory;
+    protected $fillable =['nombre_producto','descripcion','precio','stock', 'imagen','pais','ciudad','lugar','estrato'];
 }

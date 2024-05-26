@@ -21,7 +21,7 @@ class InmuebleController extends Controller
      */
     public function create()
     {
-        //
+        return view('inmuebles.create');
     }
 
     /**
@@ -29,7 +29,9 @@ class InmuebleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        ////dd($request->all());
+        Inmueble::create($request->all());
+        return redirect()->route('inmuebles.index');
     }
 
     /**
@@ -45,7 +47,7 @@ class InmuebleController extends Controller
      */
     public function edit(Inmueble $inmueble)
     {
-        //
+        return view('inmuebles.edit', compact('inmueble'));
     }
 
     /**
@@ -53,7 +55,8 @@ class InmuebleController extends Controller
      */
     public function update(Request $request, Inmueble $inmueble)
     {
-        //
+        $inmueble->update($request->all());
+        return redirect()->route('inmuebles.index');
     }
 
     /**
@@ -61,6 +64,7 @@ class InmuebleController extends Controller
      */
     public function destroy(Inmueble $inmueble)
     {
-        //
+        $inmueble->delete();
+        return redirect()->route('inmuebles.index');
     }
 }

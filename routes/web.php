@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('index',['nombre'=>$nombre]);
     
 });
-Route::get('/inmuebles',[InmuebleController::class,'index'])->name('inmuebles.index');
+
 
 Route::get('/Arquitectura', function () {
     $nombre= 'Fredis Barrios';
@@ -37,7 +37,22 @@ Route::get('/Diseño', function () {
     return view('Diseño',['nombre'=>$nombre]);
 
 });
-/*
+/* CRUD de productos
+//listar productos
+Route::get('/inmuebles',[InmuebleController::class,'index'])->name('inmuebles.index');
+//crear y guardar producto
+Route::get('/inmuebles/create',[InmuebleController::class,'create'])->name('inmuebles.create');
+Route::post('/inmuebles',[InmuebleController::class,'store'])->name('inmuebles.store');
+//listar producto
+Route::get('/inmuebles/{inmueble}',[InmuebleController::class,'show'])->name('inmuebles.show');
+//editar y actualizar producto
+Route::get('/inmuebles/{inmueble}/edit',[InmuebleController::class,'edit'])->name('inmuebles.edit');
+Route::put('/inmuebles/{inmueble}',[InmuebleController::class,'update'])->name('inmuebles.update');
+//eliminar producto
+Route::delete('/inmuebles',[InmuebleController::class,'destroy'])->name('inmuebles.destroy');
+*/
+Route::resource('/inmuebles',InmuebleController::class);//crud de productos
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -48,4 +63,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';*/
+require __DIR__.'/auth.php';

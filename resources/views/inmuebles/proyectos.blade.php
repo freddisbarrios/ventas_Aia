@@ -14,17 +14,34 @@
 
             </h2>
             <p>{{ Str::limit($inmueble->descripcion,50)}}</p>
-            <div class="card-actions justify-end">
-                <div class="badge badge-outline">$ {{$inmueble->precio}}</div>
-                <div class="badge badge-outline">Stock: {{$inmueble->stock}}</div>
-                <div class="badge badge-outline">Mas imagenes: {{$inmueble->imagen}}</div>
-                <div class="badge badge-outline">Pais: {{$inmueble->pais}}</div>
-                <div class="badge badge-outline">Ciudad: {{$inmueble->ciudad}}</div>
-                <div class="badge badge-outline">Lugar: {{$inmueble->lugar}}</div>
-                <div class="badge badge-outline">Estrato: {{$inmueble->estrato}}</div>
+            <div class="card-actions ">
+                <ul>
+                    <li>precio: $ {{$inmueble->precio}}</li>
+                
+                    <li>Stock: {{$inmueble->stock}}</li>
+                    <li>Mas imagenes: {{$inmueble->imagen}}</li>
+                    <li>Pais: {{$inmueble->pais}}</li>
+                    <li>Ciudad: {{$inmueble->ciudad}}</li>
+                    <li>Lugar: {{$inmueble->lugar}}</li>
+                    <li>Estrato: {{$inmueble->estrato}}</li>
+                </ul>
+            </div>
+            <div class=" flex ">
+                <div class="bg-green-800 hover:bg-green-700 text-white text-x py-2 px-4 rounded-lg m-4" >
+                    <a href="{{route('inmuebles.edit',$inmueble->id)}}">Editar</a> 
+                </div>
+                <form action="{{route('inmuebles.destroy', $inmueble->id)}}" method="post">
+                    @csrf
+                    @method('DELETE')
+                    <button class="bg-green-800 hover:bg-green-700 text-white text-x py-2 px-4 rounded-lg m-4" type="submit">Eliminar</button>
+               
+                
+                </form>
+
             </div>
 
         </div>
+
 
     </div>
         

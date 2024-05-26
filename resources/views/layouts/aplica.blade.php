@@ -15,6 +15,11 @@
         </div>
     </header>
     <main>
+        <div class="bg-green-100 my-6 text-center">
+            <h1
+            class="text-lg font-semibold uppercase h-100">@yield('cabecero')</h1>
+
+        </div>
         @yield('contenido')
     </main>
     <footer>
