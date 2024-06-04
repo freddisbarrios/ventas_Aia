@@ -19,24 +19,24 @@ Route::get('/', function () {
     $nombre= 'Fredis Barrios';
     return view('index',['nombre'=>$nombre]);
     
-});
+})->name('index');
 
 
 Route::get('/Arquitectura', function () {
     $nombre= 'Fredis Barrios';
-    return view('Arquitectura',['nombre'=>$nombre]);
-    
-});
+    return view('Arquitectura',['nombre'=>$nombre]);    
+})->name('arquitectura');
+
 Route::get('/Construccion', function () {
     $nombre= 'Fredis Barrios';
     return view('Construccion',['nombre'=>$nombre]);
+})->name('construccion');
 
-});
 Route::get('/Diseño', function () {
     $nombre= 'Fredis Barrios';
     return view('Diseño',['nombre'=>$nombre]);
+})->name('diseño');
 
-});
 /* CRUD de productos
 //listar productos
 Route::get('/inmuebles',[InmuebleController::class,'index'])->name('inmuebles.index');

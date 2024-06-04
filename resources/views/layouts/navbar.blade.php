@@ -24,10 +24,10 @@
             <ul>
                 <li  class=" menu text-white  text-xl m-auto" ><a href="">Servicios</a>
                     <ul  class="hidden  relative  right-15 top-2 text-base">
-                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl"><a  href="">Diseño</a></li>
-                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl"><a href="">Arquitectura</a></li>
-                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl"><a href="">Construcción</a></li>
-                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl "><a href="">Proyecto</a></li>
+                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 rounded-lg hover:text-xl"><a  href="{{route('diseño')}}">Diseño</a></li>
+                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 rounded-lg hover:text-xl"><a href="{{route('arquitectura')}}">Arquitectura</a></li>
+                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 rounded-lg hover:text-xl"><a href="{{route('construccion')}}">Construcción</a></li>
+                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 rounded-lg hover:text-xl "><a href="{{route('inmuebles.index')}}">Proyecto</a></li>
                     </ul>
                 </li>
                 
@@ -41,11 +41,11 @@
                 
                 <li class="menu text-white  text-xl m-auto  "><a href="">Ventas</a>
                     <ul  class="hidden  relative  right-15 top-2 text-base" >
-                        <li  class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl "><a href="">Apartamentos</a></li>
-                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl"><a href="">Casas</a></li>
-                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl"><a href="">Oficinas</a></li>
-                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl"><a href="">Bodegas</a></li>
-                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl"><a href="">Otros</a></li>
+                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 rounded-lg  hover:text-xl "><a href="">Apartamentos</a></li>
+                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 rounded-lg hover:text-xl"><a href="">Casas</a></li>
+                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 rounded-lg hover:text-xl"><a href="">Oficinas</a></li>
+                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 rounded-lg hover:text-xl"><a href="">Bodegas</a></li>
+                        <li class="text-blue-300 hover:text-black transition-opacity hover:border bottom-2 rounded-lg hover:text-xl"><a href="">Otros</a></li>
                     </ul>
                 </li>
             </ul>
@@ -54,8 +54,8 @@
             <ul>
                 <li class="menu text-white  text-xl mr-6"><a  href="">Posventas </a>
                     <ul  class="hidden  relative  right-15 top-2 text-base">
-                        <li class="text-blue-300 hover:text-white transition-opacity hover:border bottom-2 hover:text-xl"><a href="">Iniciar Sesion</a></li>
-                        <li class="text-blue-300 hover:text-white transition-opacity hover:border bottom-2 hover:text-xl"><a href="">Registrarse</a></li>
+                        <li class="text-blue-300 hover:text-white transition-opacity hover:border bottom-2 rounded-lg hover:text-xl"><a href="{{route('login')}}">Iniciar Sesion</a></li>
+                        <li class="text-blue-300 hover:text-white transition-opacity hover:border bottom-2 rounded-lg hover:text-xl"><a href="{{route('register')}}">Registrarse</a></li>
                     </ul>
 
                 </li>
