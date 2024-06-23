@@ -13,30 +13,30 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider and all of them will
 | be assigned to the "web" middleware group. Make something great!
 |
-*/
+*/Route::view('/','inicio')->name('inicio');
 
-Route::get('/', function () {
+Route::get('index', function () {
     $nombre= 'Fredis Barrios';
     return view('index',['nombre'=>$nombre]);
     
-});
+})-> name('view.index');
 
 
 Route::get('/Arquitectura', function () {
     $nombre= 'Fredis Barrios';
     return view('Arquitectura',['nombre'=>$nombre]);
     
-});
+})->name('arquitectura.arq');
 Route::get('/Construccion', function () {
     $nombre= 'Fredis Barrios';
     return view('Construccion',['nombre'=>$nombre]);
 
-});
+})->name('construccion.constr');
 Route::get('/Diseño', function () {
     $nombre= 'Fredis Barrios';
     return view('Diseño',['nombre'=>$nombre]);
 
-});
+})->name('diseño.dis');
 /* CRUD de productos
 //listar productos
 Route::get('/inmuebles',[InmuebleController::class,'index'])->name('inmuebles.index');
@@ -51,7 +51,7 @@ Route::put('/inmuebles/{inmueble}',[InmuebleController::class,'update'])->name('
 //eliminar producto
 Route::delete('/inmuebles',[InmuebleController::class,'destroy'])->name('inmuebles.destroy');
 */
-Route::resource('/inmuebles',InmuebleController::class);//crud de productos
+Route::resource('/inmuebles',InmuebleController::class)->middleware('auth');//crud de productos
 
 Route::get('/dashboard', function () {
     return view('dashboard');

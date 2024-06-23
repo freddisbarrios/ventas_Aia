@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('titulo','ventas')</title>
-    @vite('resources/css/app.css')
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <title>@yield('titulo','SENA2024')</title>
+
+        <!-- Scripts -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    </head>
     <header>
-        @include('layouts.navbar')
+        @include('layouts.nav')
         <div class="text-end text-lg font-bold text-green-800 mr-6 text-">
-            ¡Bienvenido! {{ auth()->user()->name }}
+         
         </div>
     </header>
     <main>
@@ -26,4 +28,3 @@
     @include('layouts.footer')
     </footer>
 </body>
-</html>

@@ -6,7 +6,7 @@
 <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 m-4">
     @foreach ($inmuebles as $inmueble)
     <div class="card w-50 bg-base-100 shadow-xl">
-        <figure><img src="http://source.unsplash.com/random/800x600/?house& {{$inmueble->nombre_producto}}" alt="{{$inmueble->nombre_producto}}"></figure>
+        <figure><img src="https://loremflickr.com/200/200/store&{{$inmueble->nombre_producto}}" alt="{{$inmueble->nombre_producto}}"></figure>
         <div class="card-body">
             <h2 class="card-title">
             {{$inmueble->nombre_producto}}

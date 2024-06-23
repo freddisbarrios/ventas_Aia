@@ -1,17 +1,14 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+@extends('layouts.nuevoaplica')
+@section('titulo','ventas de Inmuebles AIA')
+@section('contenido')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
+    <<div class="hero min-h-screen bg-base-200">
+        <div class="hero-content text-center">
+          <div class="max-w-md">
+            <h1 class="text-5xl font-bold">¡Bienvenido! {{ auth()->user()->name }}</h1>
+            <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <a href="{{route('inmuebles.index')}}" class="btn btn-primary">Ver modelos </a>
+          </div>
         </div>
-    </div>
-</x-app-layout>
+      </div>
+@endsection
