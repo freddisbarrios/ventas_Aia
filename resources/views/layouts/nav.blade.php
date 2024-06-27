@@ -35,30 +35,14 @@
             <li class="text-blue-600 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl"><a href="{{route('construccion.constr')}}">Construcción</a></li>
             <li class="text-blue-600 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl "><a href="">Proyecto</a></li>
           </ul>
-        </div>
-      
-    </div>
-      
-    <div class="dropdown ">
-      <div tabindex="0" role="button" class="btn btn-ghost">
-         <div class="w-10 rounded">Servicios </div>     
-         
-      </div>
-        <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 text-black">
-          <li class="text-blue-600 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl"><a  href="{{route('diseño.dis')}}">Diseño</a></li>
-          <li class="text-blue-600 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl"><a href="{{route('arquitectura.arq')}}">Arquitectura</a></li>
-          <li class="text-blue-600 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl"><a href="{{route('construccion.constr')}}">Construcción</a></li>
-          <li class="text-blue-600 hover:text-black transition-opacity hover:border bottom-2 hover:text-xl "><a href="">Proyecto</a></li>
-        </ul>
-      </div>
-    
-  </div>
-    
-      
+        </div>   
+ 
+          
       <a href="{{ route('inmuebles.index') }}" class="btn btn-ghost btn-sm">Productos</a>
       <a href="{{ route('inicio') }}" class="btn btn-ghost btn-sm">Acerca de nosotros</a>
           
-  
+    </div>
+      
     {{-- Si esta autenticado muestra menu de usuario, sino muestra botones de login y registro --}}
     @auth
         <h3 class="mr-4 font-semibold">Hola, {{ auth()->user()->name }}</h3>
@@ -68,25 +52,26 @@
               <img alt="Tailwind CSS Navbar component" src="https://loremflickr.com/100/100/face" />
             </div>
           </div>
-          <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+          <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-green-100 rounded-box w-52 ">
             <li>
-              <a href="{{ route('dashboard') }}">Dashboard</a>
+              <a href="{{ route('dashboard') }}" class="text-black">Dashboard</a>
             </li>
             <li>
-              <a href="{{ route('profile.edit') }}">Mi perfil</a>
+              <a href="{{ route('profile.edit') }}" class="text-black">Mi perfil</a>
             </li>
             <li>
               <form method="POST" action="{{ route('logout') }}">
                 @csrf
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">Logout</a>
+                <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();" class="text-black">Logout</a>
               </form>
             </li>
           </ul>
         </div>
-    @else
+     @else
         <div class="mx-4 space-x-4">
           <a href="{{ route('login') }}" class="btn btn-outline btn-sm">Ingresar</a>
           <a href="{{ route('register') }}" class="btn btn-outline btn-sm">Registrarse</a>
         </div>
-    @endauth
+     @endauth
+   </div>
   </div>
